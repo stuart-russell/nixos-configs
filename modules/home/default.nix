@@ -2,7 +2,7 @@
 {
   imports = [
     ./ghostty.nix                     # terminal
-    ./niri.nix                        # window manager
+    ./niri/niri.nix                   # window manager
     ./p10k/p10k.nix                   # powerlevel 10k
     ./packages                        # other packages
     ./rofi.nix                        # launcher
