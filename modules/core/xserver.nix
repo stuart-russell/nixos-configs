@@ -6,10 +6,14 @@
       xkb.layout = "gb";
     };
 
-    displayManager.autoLogin = {
-      enable = true;
-      user = "${username}";
-    };
+    # displayManager = {
+    #   autoLogin = {
+    #     enable = true;
+    #     user = "${username}";
+    #   };
+    #   defaultSession = "niri";
+    # };
+
     libinput = {
       enable = true;
     };

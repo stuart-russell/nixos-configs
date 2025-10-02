@@ -1,6 +1,5 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  programs.niri.enable = true;
   programs.alacritty.enable = true; # Super+T in the default setting (terminal)
   programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
   programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
@@ -11,7 +10,6 @@
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
 
   home.packages = with pkgs; [
-    xwayland-satellite-unstable
     swaybg
   ];
 }
