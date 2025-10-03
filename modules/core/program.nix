@@ -8,5 +8,5 @@
   };
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ ];
-  # programs.niri.enable = true;
+  programs.niri.enable = true;
 }
