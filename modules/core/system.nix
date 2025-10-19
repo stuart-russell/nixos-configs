@@ -21,14 +21,21 @@
       ];
     };
   };
+
   nixpkgs = {
     overlays = [ inputs.nur.overlays.default ];
   };
 
   environment.systemPackages = with pkgs; [
     wget
+    curl
     git
   ];
+
+   environment.variables = {
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    GDK_BACKEND = "wayland";
+  };
 
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -43,6 +50,7 @@
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
+
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.05";
 }
